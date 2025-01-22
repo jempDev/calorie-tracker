@@ -1,0 +1,20 @@
+# Ignorar directorios comunes de compilación y dependencias
+node_modules/
+dist/
+build/
+
+# Ignorar archivos de configuración y logs
+*.log
+*.lock
+
+# Ignorar archivos generados
+coverage/
+*.snap
+
+# Ignorar archivos específicos
+.env
+.env.*
+
+# Ignorar cualquier cosa que no quieras formatear
+public/
+assets/
