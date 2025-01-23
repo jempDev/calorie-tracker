@@ -6,11 +6,11 @@ export type ActivityActions = {
 }
 
 export type ActivityState = {
-  activityes: Activity[]
+  activities: Activity[]
 }
 
 export const initialState: ActivityState = {
-  activityes: [],
+  activities: [],
 }
 
 export const activityReducer = (
@@ -19,6 +19,11 @@ export const activityReducer = (
 ) => {
   if (action.type === 'save-activity') {
     // Este codigo maneja la logica para actualizar el state
-    console.log('desde el tyope save-activity')
+    return {
+      ...state,
+      activities: [...state.activities, action.payload.newActivity],
+    }
   }
+
+  return state
 }
